@@ -1,7 +1,7 @@
 // Components
 import TicketList from "./TicketList"
 
-const TicketsPage = () => {
+const TicketListPage = () => {
     return (
         <main>
             <nav>
@@ -15,4 +15,4 @@ const TicketsPage = () => {
     )
 }
 
-export default TicketsPage
+export default TicketListPage
