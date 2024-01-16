@@ -1,3 +1,12 @@
+export const generateStaticParams = async () => {
+	const response = await fetch('http://localhost:3005/tickets')
+	const tickets = await response.json();
+
+	return tickets.map((ticket) => {
+		id: ticket.id
+	})
+}
+
 const getTicket = async (id) => {
     const response = await fetch(`http://localhost:3005/tickets/${id}`)
     const result = await response.json()
