@@ -1,6 +1,8 @@
+import CreateTicket from "./CreateTicket"
+
 const CreateTicketPage = () => {
     return(
-        <h1>This is the CreateTicketPage</h1>
+        <CreateTicket />
     )
 }
 
