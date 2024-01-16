@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+import Link from "next/link"
 
 // Components
 import TicketList from "./TicketList"
@@ -14,6 +15,11 @@ const TicketListPage = () => {
                 </div>
             </nav>
             <Suspense fallback={<Loading/>}>
+                <div className="flex justify-center my-8">
+                    <Link href="/tickets/create">
+                        <button className="btn-primary">New Ticket</button>
+                    </Link>
+                </div>
                 <TicketList />
 		    </Suspense>
         </main>
