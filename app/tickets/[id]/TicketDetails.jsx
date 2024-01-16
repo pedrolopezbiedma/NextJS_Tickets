@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 export const generateStaticParams = async () => {
 	const response = await fetch('http://localhost:3005/tickets')
 	const tickets = await response.json();
@@ -9,8 +11,12 @@ export const generateStaticParams = async () => {
 
 const getTicket = async (id) => {
     const response = await fetch(`http://localhost:3005/tickets/${id}`)
-    const result = await response.json()
+    if(!response.ok){
+        console.log('Not found!')
+        notFound()
+    }
 
+    const result = await response.json()
     return result
 }
 
