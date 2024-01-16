@@ -1,5 +1,8 @@
+import { Suspense } from "react"
+
 // Components
 import TicketList from "./TicketList"
+import Loading from "../loading"
 
 const TicketListPage = () => {
     return (
@@ -10,7 +13,9 @@ const TicketListPage = () => {
                     <p><small>Currently open tickets</small></p>
                 </div>
             </nav>
-            <TicketList />
+            <Suspense fallback={<Loading/>}>
+                <TicketList />
+		    </Suspense>
         </main>
     )
 }
