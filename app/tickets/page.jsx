@@ -1,6 +1,8 @@
 const TicketsPage = () => {
     return (
-        <h2>Tickets</h2>
+        <main>
+            <h2>Tickets</h2>
+        </main>
     )
 }
 
